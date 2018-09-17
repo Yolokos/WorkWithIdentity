@@ -1,0 +1,26 @@
+﻿@model IdentityWebApp.ViewModel.CreateViewModel
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<form method="post" asp-action="Create" asp-controller="Users">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div>
+        <label asp-for="Email">Email</label>
+        <input asp-for="Email" />
+    </div>
+    <div>
+        <label asp-for="Password">Password</label>
+        <input asp-for="Password" />
+    </div>
+    <div>
+        <label asp-for="Year">Year</label>
+        <input asp-for="Year" />
+    </div>
+    <div>
+        <input type="submit" value="Create" />
+    </div>
+</form>
+

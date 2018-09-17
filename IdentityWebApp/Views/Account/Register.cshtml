@@ -1,0 +1,30 @@
+﻿@model IdentityWebApp.ViewModel.RegisterViewModel
+
+@{
+    ViewData["Title"] = "Register";
+}
+
+<h2>Register</h2>
+
+<form method="post" asp-action="Register" asp-controller="Account">
+    <div asp-validation-summary="ModelOnly"></div>
+    <div>
+        <label asp-for="Email">Email</label> <br />
+        <input asp-for="Email" />
+    </div>
+    <div>
+        <label asp-for="Year">Year</label> <br />
+        <input asp-for="Year" />
+    </div>
+    <div>
+        <label asp-for="Password">Password</label> <br />
+        <input asp-for="Password" />
+    </div>
+    <div>
+        <label asp-for="ConfirmPassword">ConfirmPassword</label> <br />
+        <input asp-for="ConfirmPassword" />
+    </div>
+    <div>
+        <input type="submit" value="Register" />
+    </div>
+</form>
